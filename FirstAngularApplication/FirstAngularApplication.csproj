@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="src\app\product-component\Product.Model.ts" />
+    <None Remove="src\app\product-component\ProductServices.ts" />
+    <None Remove="src\app\ServerService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\product-component\Product.Model.ts" />
+    <TypeScriptCompile Include="src\app\product-component\ProductServices.ts" />
+    <TypeScriptCompile Include="src\app\ServerService.ts" />
+  </ItemGroup>
+
+</Project>

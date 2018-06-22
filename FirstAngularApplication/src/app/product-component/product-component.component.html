@@ -1,0 +1,39 @@
+<p>
+  product Id is {{productId}} and {{productName}} is {{GetProductDetail()}}
+</p>
+<div class="containor">
+  <div class="row">
+    <div class="col-xs-12">
+      Product Id
+      <input type="text" [(ngModel)]='productId'>
+    </div>
+    <div class="col-xs-12">
+      Product Name
+      <input type="text" [(ngModel)]='productName'>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+      <button class="btn btn-primary" (click)="onGetProductById()">Get</button>
+      <button class="btn btn-primary" (click)="onGetProductList()">Get List</button>
+    </div>
+  </div>
+  <div class="row">
+    <h2>
+      {{productStatus}}
+    </h2>
+    <h2>
+      {{productrecords}}
+    </h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div *ngFor="let item of apiValues; let i= index"
+           [ngStyle]="{backgroundColor: (i%2)==0?'blue':'yellow'}">
+        {{i}} - {{item.productName}}- <img src="{{item.productImage}}" class="img-responsive" />
+      </div>
+    </div>
+    
+  </div>
+</div>

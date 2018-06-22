@@ -1,0 +1,11 @@
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\bin\Debug\netcoreapp2.0\FirstAngularApplication.deps.json
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\bin\Debug\netcoreapp2.0\FirstAngularApplication.runtimeconfig.json
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\bin\Debug\netcoreapp2.0\FirstAngularApplication.runtimeconfig.dev.json
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\bin\Debug\netcoreapp2.0\FirstAngularApplication.dll
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\bin\Debug\netcoreapp2.0\FirstAngularApplication.pdb
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.csprojResolveAssemblyReference.cache
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.csproj.CoreCompileInputs.cache
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.AssemblyInfoInputs.cache
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.AssemblyInfo.cs
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.dll
+C:\Users\abhinav.srivastava\Documents\Visual Studio 2017\Projects\FirstAngularApplication\FirstAngularApplication\obj\Debug\netcoreapp2.0\FirstAngularApplication.pdb

@@ -1,0 +1,36 @@
+<p>
+  login-component works!
+</p>
+<br>
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+        <div class="col-xs-6">Name</div>
+        <div class="col-xs-6"><input type="text" [(ngModel)]='name' (input)="oninputUpdate($event)" [ngClass]="{'textInput':!isClass1Visible,'textInput2':isClass1Visible}"></div>
+    </div>  
+    <div class="col-xs-12">
+        <div class="col-xs-6">Password</div>
+        <div class="col-xs-6"><input type="text" [(ngModel)]='pass' (input)="oninputUpdate($event)" [ngClass]="{'textInput':isClass1Visible,'textInput2':!isClass1Visible}"></div>
+    </div>
+    <div class="col-xs-12">
+      <button class="btn btn-primary" [disabled]="!isAddDisable" (click)="onAddClick()">Add</button>
+      <button class="btn btn-primary" disabled='{{isAddDisable}}' (click)="onAddClick()">demo</button>
+    </div>
+      <div class="col-xs-12">
+        {{outResult}}
+      </div>
+      <div class="col-xs-12" *ngIf='isOutDisable; else noOutDisable' [ngStyle]="{backgroundColor:isBackgroundColor}">
+        {{outEvent}}
+      </div>
+     <ng-template #noOutDisable>
+      <p [ngStyle]="{backgroundColor:isBackgroundColor}">
+        just wait, its else verison
+      </p>
+     </ng-template>
+  </div>
+</div>
+</div>
+<br>
+
+
