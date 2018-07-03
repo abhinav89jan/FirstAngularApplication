@@ -3,46 +3,64 @@ import { ProductModel } from 'src/app/product-component/Product.Model';
 import { ProductServices } from './ProductServices';
 
 @Component({
-  selector: 'app-product-component',
-  templateUrl: './product-component.component.html',
-  //styleUrls: ['./product-component.component.css'] //when use css class
-  styles: [`p{
+    selector: 'app-product-component',
+    templateUrl: './product-component.component.html',
+    //styleUrls: ['./product-component.component.css'] //when use css class
+    styles: [`p{
     color: green;
 }`]
 })
 export class ProductComponentComponent implements OnInit {
-  productId: number = 0;
-  productName: string = "";
+    productId: number = 0;
+    productName: string = "";
 
-  pruductList: ProductModel[] = [new ProductModel(1, "Avenger", "220 byke", 96000, "https://imgd.aeplcdn.com/640x348/bw/models/bajaj-avenger-cruise-220.jpg?20181901173402")];
-  productStatus: string = "";
-  productrecords: string = "";
-  apiValues: string[] = [];
+    pruductList: ProductModel[] = [];
+    productStatus: string = "";
+    productrecords: string = "";
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  constructor(private productServices: ProductServices) { }
+    constructor(private productServices: ProductServices) { }
 
-  GetProductDetail() {
-    return this.productName + " Byke";
-  }
+    GetProductDetail() {
+        return this.productName + " Byke";
+    }
 
-  onSubmit() {
-    //this.pruductList.push(this.productName);
-    //this.productStatus = this.productName + " is created succesfully";
-    //return console.log(this.productStatus);
-  }
+    onSubmit() {
+        //this.pruductList.push(this.productName);
+        //this.productStatus = this.productName + " is created succesfully";
+        //return console.log(this.productStatus);
+    }
 
-  onGetProductById() {
-    this.productServices.GetProductById(this.productId).subscribe(
-      (response: any) => console.log(response),
-      (error) => console.log(error))
-  }
+    onGetProductById() {
+        this.productServices.GetProductById(this.productId).subscribe(
+            (response: any) => {
+                this.pruductList = [];
+                this.pruductList.push(new ProductModel(response.productID, response.name, response.productNumber, response.standardCost, "https://media.zigcdn.com/media/model/2018/Jan/avenger-street-220_600x300.jpg"))
+            },
+            (error) => console.log(error))
+    }
 
-  onGetProductList() {
-    this.productServices.GetProductList().subscribe(
-      (response: any) => console.log(response),
-      (error) => console.log(error))
-  }
+    onGetProductList() {
+        this.productServices.GetProductList().subscribe(
+            (response: any) => {
+                this.pruductList = [];
+                for (let item of response) {
+                    this.pruductList.push(new ProductModel(item.productID, item.name, item.productNumber, item.standardCost, "https://media.zigcdn.com/media/model/2018/Jan/avenger-street-220_600x300.jpg"))
+                }
+            },
+            (error) => console.log(error))
+    }
+
+    onGetProductListByFilter() {
+        this.productServices.GetProductListByFilter(this.productId, this.productName).subscribe(
+            (response: any) => {
+                this.pruductList = [];
+                for (let item of response) {
+                    this.pruductList.push(new ProductModel(item.productID, item.name, item.productNumber, item.standardCost, "https://media.zigcdn.com/media/model/2018/Jan/avenger-street-220_600x300.jpg"))
+                }
+            },
+            (error) => console.log(error))
+    }
 }

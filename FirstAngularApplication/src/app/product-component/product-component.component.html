@@ -1,39 +1,48 @@
 <p>
-  product Id is {{productId}} and {{productName}} is {{GetProductDetail()}}
+    product Id is {{productId}} and {{productName}} is {{GetProductDetail()}}
 </p>
 <div class="containor">
-  <div class="row">
-    <div class="col-xs-12">
-      Product Id
-      <input type="text" [(ngModel)]='productId'>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                Product Id
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="text" [(ngModel)]='productId' class="form-control">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                Product Name
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="text" [(ngModel)]='productName' class="form-control">
+            </div>
+        </div>
     </div>
-    <div class="col-xs-12">
-      Product Name
-      <input type="text" [(ngModel)]='productName'>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button (click)="onSubmit()" style="float: right; margin:3px" class="btn btn-primary">Submit</button>
+            <button (click)="onGetProductById()" style="float: right; margin:3px" class="btn btn-primary">Get</button>
+            <button (click)="onGetProductList()" style="float: right; margin:3px" class="btn btn-primary">Get List</button>
+            <button (click)="onGetProductListByFilter()" style="float: right; margin:3px" class="btn btn-primary">GetByFilter</button>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
-      <button class="btn btn-primary" (click)="onGetProductById()">Get</button>
-      <button class="btn btn-primary" (click)="onGetProductList()">Get List</button>
+    <div class="row">
+        <h2>
+            {{productStatus}}
+        </h2>
+        <h2>
+            {{productrecords}}
+        </h2>
     </div>
-  </div>
-  <div class="row">
-    <h2>
-      {{productStatus}}
-    </h2>
-    <h2>
-      {{productrecords}}
-    </h2>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div *ngFor="let item of apiValues; let i= index"
-           [ngStyle]="{backgroundColor: (i%2)==0?'blue':'yellow'}">
-        {{i}} - {{item.productName}}- <img src="{{item.productImage}}" class="img-responsive" />
-      </div>
+
+    <div class="row" *ngFor="let item of pruductList; let i= index"
+         [ngStyle]="{backgroundColor: (i%2)==0?'grey':'pink'}">
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">{{item.productId}}</div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img src="{{item.productImage}}" class="img-responsive" width="200px" /></div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">{{item.productName}} -- {{item.productDescription}} -- {{item.productCost    }}</div>
     </div>
-    
-  </div>
 </div>

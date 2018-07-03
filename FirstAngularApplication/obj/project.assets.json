@@ -12544,11 +12544,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\abhinav.srivastava\\Documents\\Visual Studio 2017\\Projects\\FirstAngularApplication\\FirstAngularApplication\\FirstAngularApplication.csproj",
+      "projectUniqueName": "D:\\abhinav_study\\MyGit\\FirstAngularApplication\\FirstAngularApplication\\FirstAngularApplication.csproj",
       "projectName": "FirstAngularApplication",
-      "projectPath": "C:\\Users\\abhinav.srivastava\\Documents\\Visual Studio 2017\\Projects\\FirstAngularApplication\\FirstAngularApplication\\FirstAngularApplication.csproj",
+      "projectPath": "D:\\abhinav_study\\MyGit\\FirstAngularApplication\\FirstAngularApplication\\FirstAngularApplication.csproj",
       "packagesPath": "C:\\Users\\abhinav.srivastava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abhinav.srivastava\\Documents\\Visual Studio 2017\\Projects\\FirstAngularApplication\\FirstAngularApplication\\obj\\",
+      "outputPath": "D:\\abhinav_study\\MyGit\\FirstAngularApplication\\FirstAngularApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
